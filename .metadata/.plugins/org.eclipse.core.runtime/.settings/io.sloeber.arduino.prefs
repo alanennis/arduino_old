@@ -1,0 +1,14 @@
+714=2
+Automatically\ import\ libraries=true
+FuStatub=12
+FuStatus=10
+JANTJE.TEMPLATE_USE_DEFAULT=defaultIno
+Last\ Used\ Upload\ port=/dev/cu.wchusbserial1d1120
+Last\ used\ Board=mega
+Last\ used\ Boards\ file=/Applications/sloeber.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.6.17/boards.txt
+Last\ used\ Examples=
+Private\ Library\ Path=/Users/alane/Arduino/libraries
+Private\ hardware\ Path=/Users/alane/Arduino/hardware
+eclipse.preferences.version=1
+last\ Used\ upload\ Protocol=Default
+last\ used\ Board\ custom\ option\ selections=CPU\=ATMEGA2560

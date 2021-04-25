@@ -1,0 +1,33 @@
+16:44:47 **** Clean-only build of configuration Release for project blynk_heating ****
+make clean 
+make: *** No rule to make target `clean'.  Stop.
+16:44:48 **** Build of configuration Release for project blynk_heating ****
+make all 
+Building file: ../.ino.cpp
+Starting C++ compile
+"/Applications/sloeber.app/Contents/Eclipse//arduinoPlugin/packages/arduino/tools/avr-gcc/4.9.2-atmel3.5.3-arduino2/bin/avr-g++" -c -g -Os -Wall -Wextra -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -flto -mmcu=atmega2560 -DF_CPU=16000000L -DARDUINO=10609 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR   -I"/Applications/sloeber.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.6.17/cores/arduino" -I"/Applications/sloeber.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.6.17/variants/mega" -MMD -MP -MF".ino.cpp.d" -MT".ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "../.ino.cpp"  -o  ".ino.cpp.o"
+Finished building: ../.ino.cpp
+make: *** No rule to make target `/Users/alane/Documents/Arduino/sloeber', needed by `blynk_heating.elf'.  Stop.
+ 
+16:45:05 **** Incremental Build of configuration Release for project blynk_heating ****
+make all 
+make: *** No rule to make target `/Users/alane/Documents/Arduino/sloeber', needed by `blynk_heating.elf'.  Stop.
+16:45:54 **** Incremental Build of configuration Release for project blynk_heating ****
+make all 
+Building file: ../.ino.cpp
+Starting C++ compile
+"/Applications/sloeber.app/Contents/Eclipse//arduinoPlugin/packages/arduino/tools/avr-gcc/4.9.2-atmel3.5.3-arduino2/bin/avr-g++" -c -g -Os -Wall -Wextra -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -flto -mmcu=atmega2560 -DF_CPU=16000000L -DARDUINO=10609 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR   -I"/Applications/sloeber.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.6.17/cores/arduino" -I"/Applications/sloeber.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.6.17/variants/mega" -MMD -MP -MF".ino.cpp.d" -MT".ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "../.ino.cpp"  -o  ".ino.cpp.o"
+Finished building: ../.ino.cpp
+make: *** No rule to make target `/Users/alane/Documents/Arduino/sloeber', needed by `blynk_heating.elf'.  Stop.
+ 
+16:47:56 **** Incremental Build of configuration Release for project blynk_heating ****
+make all 
+make: *** No rule to make target `/Users/alane/Documents/Arduino/sloeber', needed by `blynk_heating.elf'.  Stop.
+16:49:07 **** Incremental Build of configuration Release for project blynk_heating ****
+make all 
+Building file: ../.ino.cpp
+Starting C++ compile
+"/Applications/sloeber.app/Contents/Eclipse//arduinoPlugin/packages/arduino/tools/avr-gcc/4.9.2-atmel3.5.3-arduino2/bin/avr-g++" -c -g -Os -Wall -Wextra -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -flto -mmcu=atmega1280 -DF_CPU=16000000L -DARDUINO=10609 -DARDUINO_AVR_MEGA -DARDUINO_ARCH_AVR   -I"/Applications/sloeber.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.6.17/cores/arduino" -I"/Applications/sloeber.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.6.17/variants/mega" -MMD -MP -MF".ino.cpp.d" -MT".ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "../.ino.cpp"  -o  ".ino.cpp.o"
+Finished building: ../.ino.cpp
+ 
+make: *** No rule to make target `/Users/alane/Documents/Arduino/sloeber', needed by `blynk_heating.elf'.  Stop.

@@ -1,0 +1,6 @@
+{
+    "sketch": "BareMinimum.ino",
+    "port": "/dev/tty.usbmodem144301",
+    "board": "arduino:avr:uno",
+    "programmer": "AVR ISP"
+}

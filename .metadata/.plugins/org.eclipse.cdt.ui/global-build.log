@@ -1,0 +1,140 @@
+18:25:50 **** Clean-only build of configuration Release for project heating ****
+make clean 
+rm -f  ./core/WInterrupts.c.d ./core/hooks.c.d ./core/wiring.c.d ./core/wiring_analog.c.d ./core/wiring_digital.c.d ./core/wiring_pulse.c.d ./core/wiring_shift.c.d  /Users/alane/Documents/Arduino/heating/Release/arduino.ar  ./core/CDC.cpp.o ./core/HardwareSerial.cpp.o ./core/HardwareSerial0.cpp.o ./core/HardwareSerial1.cpp.o ./core/HardwareSerial2.cpp.o ./core/HardwareSerial3.cpp.o ./core/IPAddress.cpp.o ./core/PluggableUSB.cpp.o ./core/Print.cpp.o ./core/Stream.cpp.o ./core/Tone.cpp.o ./core/USBCore.cpp.o ./core/WInterrupts.c.o ./core/WMath.cpp.o ./core/WString.cpp.o ./core/abi.cpp.o ./core/hooks.c.o ./core/main.cpp.o ./core/new.cpp.o ./core/wiring.c.o ./core/wiring_analog.c.o ./core/wiring_digital.c.o ./core/wiring_pulse.S.o ./core/wiring_pulse.c.o ./core/wiring_shift.c.o  ./.ino.cpp.o  heating.hex  ./heating.ino.d  ./core/wiring_pulse.S.d  heating.elf  ./.ino.cpp.d  ./core/CDC.cpp.d ./core/HardwareSerial.cpp.d ./core/HardwareSerial0.cpp.d ./core/HardwareSerial1.cpp.d ./core/HardwareSerial2.cpp.d ./core/HardwareSerial3.cpp.d ./core/IPAddress.cpp.d ./core/PluggableUSB.cpp.d ./core/Print.cpp.d ./core/Stream.cpp.d ./core/Tone.cpp.d ./core/USBCore.cpp.d ./core/WMath.cpp.d ./core/WString.cpp.d ./core/abi.cpp.d ./core/main.cpp.d ./core/new.cpp.d 
+ 
+18:25:53 **** Build of configuration Release for project heating ****
+make all 
+Building file: ../.ino.cpp
+Starting C++ compile
+"/Applications/sloeber.app/Contents/Eclipse//arduinoPlugin/packages/arduino/tools/avr-gcc/4.9.2-atmel3.5.3-arduino2/bin/avr-g++" -c -g -Os -Wall -Wextra -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -flto -mmcu=atmega2560 -DF_CPU=16000000L -DARDUINO=10609 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR   -I"/Applications/sloeber.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.6.17/cores/arduino" -I"/Applications/sloeber.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.6.17/variants/mega" -MMD -MP -MF".ino.cpp.d" -MT".ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "../.ino.cpp"  -o  ".ino.cpp.o"
+../.ino.cpp:8:25: fatal error: SimpleTimer.h: No such file or directory
+ #include <SimpleTimer.h>
+                         ^
+compilation terminated.
+make: *** [.ino.cpp.o] Error 1
+18:27:24 **** Incremental Build of configuration Release for project heating ****
+make all 
+Building file: ../.ino.cpp
+Starting C++ compile
+"/Applications/sloeber.app/Contents/Eclipse//arduinoPlugin/packages/arduino/tools/avr-gcc/4.9.2-atmel3.5.3-arduino2/bin/avr-g++" -c -g -Os -Wall -Wextra -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -flto -mmcu=atmega2560 -DF_CPU=16000000L -DARDUINO=10609 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR   -I"/Applications/sloeber.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.6.17/cores/arduino" -I"/Applications/sloeber.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.6.17/variants/mega" -I/Users/alane/Documents/Arduino/libraries/SimpleTimer -MMD -MP -MF".ino.cpp.d" -MT".ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "../.ino.cpp"  -o  ".ino.cpp.o"
+In file included from ../.ino.cpp:14:0:
+../heating.ino:11:16: warning: overflow in implicit constant conversion [-Woverflow]
+ int duration = 600000;
+                ^
+../heating.ino: In function 'void loop()':
+../heating.ino:59:17: error: invalid use of non-static member function
+  clock_check.run;
+                 ^
+make: *** [.ino.cpp.o] Error 1
+20:18:47 **** Incremental Build of configuration Release for project heating ****
+make all 
+Building file: ../.ino.cpp
+Starting C++ compile
+"/Applications/sloeber.app/Contents/Eclipse//arduinoPlugin/packages/arduino/tools/avr-gcc/4.9.2-atmel3.5.3-arduino2/bin/avr-g++" -c -g -Os -Wall -Wextra -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -flto -mmcu=atmega2560 -DF_CPU=16000000L -DARDUINO=10609 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR   -I"/Applications/sloeber.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.6.17/cores/arduino" -I"/Applications/sloeber.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.6.17/variants/mega" -I/Users/alane/Documents/Arduino/libraries/SimpleTimer -MMD -MP -MF".ino.cpp.d" -MT".ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "../.ino.cpp"  -o  ".ino.cpp.o"
+In file included from ../.ino.cpp:14:0:
+../heating.ino:11:16: warning: overflow in implicit constant conversion [-Woverflow]
+ int duration = 600000;
+                ^
+../heating.ino: In function 'void loop()':
+../heating.ino:59:17: error: invalid use of non-static member function
+  clock_check.run;
+                 ^
+make: *** [.ino.cpp.o] Error 1
+20:20:01 **** Incremental Build of configuration Release for project heating ****
+make all 
+Building file: ../.ino.cpp
+Starting C++ compile
+"/Applications/sloeber.app/Contents/Eclipse//arduinoPlugin/packages/arduino/tools/avr-gcc/4.9.2-atmel3.5.3-arduino2/bin/avr-g++" -c -g -Os -Wall -Wextra -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -flto -mmcu=atmega2560 -DF_CPU=16000000L -DARDUINO=10609 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR   -I"/Applications/sloeber.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.6.17/cores/arduino" -I"/Applications/sloeber.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.6.17/variants/mega" -I/Users/alane/Documents/Arduino/libraries/SimpleTimer -MMD -MP -MF".ino.cpp.d" -MT".ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "../.ino.cpp"  -o  ".ino.cpp.o"
+In file included from ../.ino.cpp:14:0:
+../heating.ino:11:16: warning: overflow in implicit constant conversion [-Woverflow]
+ int duration = 600000;
+                ^
+../heating.ino: In function 'void loop()':
+../heating.ino:59:17: error: invalid use of non-static member function
+  clock_check.run;
+                 ^
+make: *** [.ino.cpp.o] Error 1
+20:21:33 **** Incremental Build of configuration Release for project testing ****
+make all 
+Building target: testing
+Printing size:
+"/Applications/sloeber.app/Contents/Eclipse//arduinoPlugin/packages/arduino/tools/avr-gcc/4.9.2-atmel3.5.3-arduino2/bin/avr-size" -A "/Users/alane/Documents/Arduino/testing/Release/testing.elf"
+/Users/alane/Documents/Arduino/testing/Release/testing.elf  :
+section                    size      addr
+.data                         0   8389120
+.text                       656         0
+.bss                          9   8389120
+.comment                     17         0
+.note.gnu.avr.deviceinfo     64         0
+.debug_info                3004         0
+.debug_abbrev              2842         0
+.debug_line                  26         0
+.debug_str                  998         0
+Total                      7616
+
+
+Finished building target: testing
+ 
+20:23:12 **** Incremental Build of configuration Release for project testing ****
+make all 
+Building target: testing
+Printing size:
+"/Applications/sloeber.app/Contents/Eclipse//arduinoPlugin/packages/arduino/tools/avr-gcc/4.9.2-atmel3.5.3-arduino2/bin/avr-size" -A "/Users/alane/Documents/Arduino/testing/Release/testing.elf"
+/Users/alane/Documents/Arduino/testing/Release/testing.elf  :
+section                    size      addr
+.data                         0   8389120
+.text                       656         0
+.bss                          9   8389120
+.comment                     17         0
+.note.gnu.avr.deviceinfo     64         0
+.debug_info                3004         0
+.debug_abbrev              2842         0
+.debug_line                  26         0
+.debug_str                  998         0
+Total                      7616
+
+
+Finished building target: testing
+ 
+20:24:40 **** Incremental Build of configuration Release for project testing ****
+make all 
+Building target: testing
+Printing size:
+"/Applications/sloeber.app/Contents/Eclipse//arduinoPlugin/packages/arduino/tools/avr-gcc/4.9.2-atmel3.5.3-arduino2/bin/avr-size" -A "/Users/alane/Documents/Arduino/testing/Release/testing.elf"
+/Users/alane/Documents/Arduino/testing/Release/testing.elf  :
+section                    size      addr
+.data                         0   8389120
+.text                       656         0
+.bss                          9   8389120
+.comment                     17         0
+.note.gnu.avr.deviceinfo     64         0
+.debug_info                3004         0
+.debug_abbrev              2842         0
+.debug_line                  26         0
+.debug_str                  998         0
+Total                      7616
+
+
+Finished building target: testing
+ 
+20:24:51 **** Incremental Build of configuration Release for project testing ****
+make all 
+Building target: testing
+Printing size:
+"/Applications/sloeber.app/Contents/Eclipse//arduinoPlugin/packages/arduino/tools/avr-gcc/4.9.2-atmel3.5.3-arduino2/bin/avr-size" -A "/Users/alane/Documents/Arduino/testing/Release/testing.elf"
+/Users/alane/Documents/Arduino/testing/Release/testing.elf  :
+section                    size      addr
+.data                         0   8389120
+.text                       656         0
+.bss                          9   8389120
+.comment                     17         0
+.note.gnu.avr.deviceinfo     64         0
+.debug_info                3004         0
+.debug_abbrev              2842         0
+.debug_line                  26         0
+.debug_str                  998         0
+Total                      7616
+
+
+Finished building target: testing
+ 

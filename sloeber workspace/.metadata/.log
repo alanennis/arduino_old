@@ -1,0 +1,75 @@
+!SESSION 2017-01-21 16:42:19.999 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -perspective io.sloeber.application.perspective -keyring /Users/alane/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -perspective io.sloeber.application.perspective -keyring /Users/alane/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2017-01-21 16:42:43.372
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY io.sloeber.arduino.core 1 0 2017-01-21 16:43:32.481
+!MESSAGE The folder/Users/alane/Arduino/hardware' does not contain any files.
+
+!ENTRY io.sloeber.arduino.core 1 0 2017-01-21 16:43:32.597
+!MESSAGE The folder/Users/alane/Arduino/hardware' does not contain any files.
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-01-21 16:44:24.952
+!MESSAGE Indexed 'blynk_heating' (26 sources, 80 headers) in 2.58 sec: 3,524 declarations; 8,266 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY io.sloeber.arduino.core 4 0 2017-01-21 16:44:49.474
+!MESSAGE Serial port /dev/cu.wchusbserial1d1120 already in use. Try quiting any programs that may be using it
+!STACK 0
+jssc.SerialPortException: Port name - /dev/cu.wchusbserial1d1120; Method name - openPort(); Exception type - Port busy.
+	at jssc.SerialPort.openPort(SerialPort.java:164)
+	at io.sloeber.core.api.Serial.connect(Serial.java:169)
+	at io.sloeber.core.api.Serial.connect(Serial.java:160)
+	at io.sloeber.core.api.Serial.<init>(Serial.java:107)
+	at io.sloeber.core.api.Serial.<init>(Serial.java:82)
+	at io.sloeber.core.communication.ArduinoSerial.makeArduinoUploadready(ArduinoSerial.java:234)
+	at io.sloeber.core.tools.uploaders.arduinoUploader.uploadUsingPreferences(arduinoUploader.java:60)
+	at io.sloeber.core.tools.uploaders.UploadSketchWrapper$UploadJobWrapper.run(UploadSketchWrapper.java:184)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY io.sloeber.arduino.core 2 0 2017-01-21 16:44:49.499
+!MESSAGE Unable to open Serial port /dev/cu.wchusbserial1d1120
+
+!ENTRY io.sloeber.arduino.core 1 0 2017-01-21 16:48:50.939
+!MESSAGE The folder/Users/alane/Arduino/hardware' does not contain any files.
+
+!ENTRY io.sloeber.arduino.core 1 0 2017-01-21 16:48:51.081
+!MESSAGE The folder/Users/alane/Arduino/hardware' does not contain any files.
+
+!ENTRY io.sloeber.arduino.core 1 0 2017-01-21 16:49:14.750
+!MESSAGE The folder/Users/alane/Arduino/hardware' does not contain any files.
+
+!ENTRY io.sloeber.arduino.core 1 0 2017-01-21 16:49:14.782
+!MESSAGE The folder/Users/alane/Arduino/hardware' does not contain any files.
+
+!ENTRY io.sloeber.arduino.core 4 0 2017-01-21 16:49:51.472
+!MESSAGE failed to upload 
+!STACK 0
+java.lang.IllegalStateException: Job manager has been shut down.
+	at org.eclipse.core.internal.jobs.JobManager.schedule(JobManager.java:1240)
+	at org.eclipse.core.internal.jobs.InternalJob.schedule(InternalJob.java:382)
+	at org.eclipse.core.runtime.jobs.Job.schedule(Job.java:641)
+	at org.eclipse.ui.internal.console.IOConsolePartitioner.streamsClosed(IOConsolePartitioner.java:158)
+	at org.eclipse.ui.console.IOConsole.checkFinished(IOConsole.java:236)
+	at org.eclipse.ui.console.IOConsole.streamClosed(IOConsole.java:248)
+	at org.eclipse.ui.console.IOConsoleOutputStream.close(IOConsoleOutputStream.java:174)
+	at io.sloeber.core.tools.ExternalCommandLauncher.launch(ExternalCommandLauncher.java:341)
+	at io.sloeber.core.tools.uploaders.GenericLocalUploader.RunConsoledCommand(GenericLocalUploader.java:40)
+	at io.sloeber.core.tools.uploaders.arduinoUploader.uploadUsingPreferences(arduinoUploader.java:84)
+	at io.sloeber.core.tools.uploaders.UploadSketchWrapper$UploadJobWrapper.run(UploadSketchWrapper.java:184)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SESSION 2017-11-19 14:25:11.121 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -perspective io.sloeber.application.perspective -keyring /Users/alane/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -perspective io.sloeber.application.perspective -keyring /Users/alane/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2017-11-19 14:25:39.107
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences

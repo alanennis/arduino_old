@@ -1,0 +1,188 @@
+// thirtysecondtimer.ino by Costas 12 Dec 2016
+#define BLYNK_PRINT Serial
+#include <SPI.h>
+#include <Ethernet.h>
+#include <BlynkSimpleEthernet.h>
+//#include <SimpleTimer.h>      // library for SimpleTimer
+#include <RBD_Timer.h> // https://github.com/alextaujenis/RBD_Timer http://robotsbigdata.com/docs-arduino-timer.html
+
+
+int Countdown;   // Global variable used in Slider widget and runEveryMinute()
+int TimeChoice;
+//char lcd_message[];
+byte control_pin = 22;
+bool heat_state = false;
+int state;
+//int CurrentDuration = 0;
+int heating_run_timer;
+
+
+char auth[] = "a8483d62fa0c4e3f96b906e722d4d3ca";
+WidgetLCD lcd(V2);
+
+//SimpleTimer heat_check_timer;
+//SimpleTimer heating_timer;
+
+RBD::Timer heating_timer;
+RBD::Timer status_timer;
+
+
+
+
+BLYNK_WRITE(V0){   // add a slider to your project on V0 range 0 to 30 (minutes)
+  Countdown = param.asInt();  // set variable as Slider value
+  Serial.println(Countdown);
+}
+
+BLYNK_WRITE(V1){   // Get index of timer choice
+  switch (param.asInt())
+    {
+      case 1: { // Item 1
+        Serial.println("30 minutes heating selected");
+       
+        //LCDUpdate("Heating is on 30");
+        heat_action(30000, 1);
+        break;
+      }
+      case 2: { // Item 2
+        Serial.println("45 minutes heating selected");
+        //LCDUpdate("Heating is on 45");
+        heat_action(45000, 1);
+       
+        break;
+      }    
+       case 3: { // Item 2
+        Serial.println("60 minutes heating selected");
+        //LCDUpdate("Heating is on 60");
+        heat_action(60000, 1);
+        
+        break;
+      }    
+       case 4: { // Item 2
+        Serial.println("90 minutes heating selected");
+        //LCDUpdate("Heating is on 90");
+        heat_action(90000, 1);
+        
+        break;
+      }     
+    }
+  
+   
+  }
+  
+void LCDUpdate(String lcd_message) { // update the lcd and add new messages 
+  lcd.print(0,0, lcd_message);
+}
+  
+  
+void heat_action(unsigned long duration, int action) { //action 0 = off, 1 = on
+
+switch (action)
+  {
+    
+  case 0: { // heating off
+    digitalWrite (control_pin, LOW);
+    //LCDUpdate("Turning heating off");
+    heat_state = false;
+    heating_timer.stop();
+    break;
+  }
+  
+  case 1: { // heating on for duration
+
+    //CurrentDuration = duration;
+
+//    heating_timer.disable(heating_run_timer);
+//    heating_run_timer = heating_timer.setInterval(CurrentDuration, heat_off);
+//    digitalWrite(control_pin, HIGH);
+//    heat_state = true;
+//    heating_timer.enable(heating_run_timer);
+//	  Serial.println("setting timer on");
+//	  //LCDUpdate("Heating on");
+
+
+	  Serial.println("setting timer on");
+	  heating_timer.setTimeout(duration);
+	  digitalWrite(control_pin, HIGH);
+	  heat_state = true;
+
+  } 
+  }
+}
+  
+int get_time_left(){
+
+	unsigned long seconds_remaining;
+	unsigned int minutes_remaining;
+
+	seconds_remaining = heating_timer.getInverseValue() / 1000;
+	//minutes_remaining = seconds_remaining / 60;
+	Serial.println (seconds_remaining);
+
+	return seconds_remaining;
+
+}
+
+void show_heat_state () { //display state in LCD
+
+	unsigned long seconds_remaining;
+	unsigned int minutes_remaining;
+
+	state = digitalRead(control_pin);
+	lcd.clear();
+	if (state == 0){
+	  lcd.print(0,0, "Heating off");
+	  heating_timer.stop();
+	}
+	if (state == 1) {
+
+		if (heating_timer.isActive()) {
+			minutes_remaining = get_time_left();
+		}
+		else { minutes_remaining = 0;
+		}
+
+
+
+	  lcd.print(0,0, "Heating on");
+	  lcd.print(0,1, minutes_remaining);
+	  lcd.print(3,1, "Minutes left");
+	}
+	Serial.println(state);
+
+	}
+
+void heat_off() {
+
+	  heat_action(0,0);
+}
+  
+
+
+void setup()
+{
+  pinMode(control_pin, OUTPUT);
+  Serial.begin(9600); 
+  Blynk.begin(auth);  // this is now a blocking function - more on this later
+  
+  lcd.clear();
+  //heat_check_timer.setInterval(5000, show_heat_state);
+  status_timer.setTimeout(1000);
+  //heating_run_timer = heating_timer.setInterval(CurrentDuration, heat_off);
+  //heating_timer.disable(heating_run_timer);
+  
+  
+  
+}
+
+void loop()
+{
+  Blynk.run();
+//  heat_check_timer.run();
+//  heating_timer.run();
+  if(heating_timer.onRestart()) { heat_off(); }
+  if(status_timer.onRestart()) { show_heat_state(); }
+
+  
+ 
+}

@@ -1,0 +1,17 @@
+20:20:01 **** Incremental Build of configuration Release for project heating ****
+make all 
+Building file: ../.ino.cpp
+Starting C++ compile
+"/Applications/sloeber.app/Contents/Eclipse//arduinoPlugin/packages/arduino/tools/avr-gcc/4.9.2-atmel3.5.3-arduino2/bin/avr-g++" -c -g -Os -Wall -Wextra -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -flto -mmcu=atmega2560 -DF_CPU=16000000L -DARDUINO=10609 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR   -I"/Applications/sloeber.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.6.17/cores/arduino" -I"/Applications/sloeber.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.6.17/variants/mega" -I/Users/alane/Documents/Arduino/libraries/SimpleTimer -MMD -MP -MF".ino.cpp.d" -MT".ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "../.ino.cpp"  -o  ".ino.cpp.o"
+In file included from ../.ino.cpp:14:0:
+../heating.ino:11:16: warning: overflow in implicit constant conversion [-Woverflow]
+ int duration = 600000;
+                ^
+../heating.ino: In function 'void loop()':
+../heating.ino:59:17: error: invalid use of non-static member function
+  clock_check.run;
+                 ^
+make: *** [.ino.cpp.o] Error 1
+
+20:20:02 Build Finished (took 916ms)
+
